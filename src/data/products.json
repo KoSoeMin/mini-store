@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "ရွှေဖီ ချောကလက်",
+    "price": 500,
+    "image": "https://placehold.co/400x300/f7c948/1f2937?text=Chocolate",
+    "category": "မုန့်"
+  },
+  {
+    "id": 2,
+    "name": "လက်ဖက်ဆား တစ်ထုပ်",
+    "price": 1200,
+    "image": "https://placehold.co/400x300/68d391/1f2937?text=Tea+Salt",
+    "category": "လက်ဖက်"
+  },
+  {
+    "id": 3,
+    "name": "ဆပ်ပြာ",
+    "price": 800,
+    "image": "https://placehold.co/400x300/90cdf4/1f2937?text=Soap",
+    "category": "အိမ်သုံး"
+  },
+  {
+    "id": 4,
+    "name": "ဆန် တစ်ပြည်",
+    "price": 3500,
+    "image": "https://placehold.co/400x300/faf089/1f2937?text=Rice",
+    "category": "စားသောက်ကုန်"
+  },
+  {
+    "id": 5,
+    "name": "ဆီ တစ်ပုလင်း",
+    "price": 4200,
+    "image": "https://placehold.co/400x300/f6ad55/1f2937?text=Oil",
+    "category": "စားသောက်ကုန်"
+  },
+  {
+    "id": 6,
+    "name": "သကြား တစ်ထုပ်",
+    "price": 1800,
+    "image": "https://placehold.co/400x300/fbd38d/1f2937?text=Sugar",
+    "category": "စားသောက်ကုန်"
+  },
+  {
+    "id": 7,
+    "name": "ကော်ဖီမစ် တစ်ထုပ်",
+    "price": 300,
+    "image": "https://placehold.co/400x300/c6f6d5/1f2937?text=Coffee",
+    "category": "အဖျော်ယမကာ"
+  },
+  {
+    "id": 8,
+    "name": "ခေါက်ဆွဲခြောက်",
+    "price": 700,
+    "image": "https://placehold.co/400x300/fbb6ce/1f2937?text=Noodles",
+    "category": "စားသောက်ကုန်"
+  },
+  {
+    "id": 9,
+    "name": "သွားတိုက်ဆေး",
+    "price": 2500,
+    "image": "https://placehold.co/400x300/b794f4/ffffff?text=Toothpaste",
+    "category": "အိမ်သုံး"
+  },
+  {
+    "id": 10,
+    "name": "ဘီစကစ် တစ်ထုပ်",
+    "price": 1000,
+    "image": "https://placehold.co/400x300/f687b3/1f2937?text=Biscuit",
+    "category": "မုန့်"
+  }
+]
