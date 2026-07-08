@@ -41,15 +41,19 @@ function CheckoutForm({ onCancel, onOrderComplete }) {
       return
     }
 
+    const createdAt = new Date()
+    const orderId = createdAt.getTime()
+
     const order = {
-      id: Date.now(),
+      id: orderId,
+      orderNumber: `DMY-${String(orderId).slice(-6)}`,
       customer: {
         ...customer,
         phone: normalizedPhone,
       },
       items: cartItems,
       total: cartTotal,
-      createdAt: new Date().toISOString(),
+      createdAt: createdAt.toISOString(),
     }
 
     saveOrder(order)
