@@ -1,5 +1,5 @@
-import formatKyat from './formatKyat'
-import useCart from './useCart'
+import useCart from '../context/useCart'
+import { formatKyat } from '../utils/format'
 
 function CartButton() {
   const { cartCount, cartTotal } = useCart()

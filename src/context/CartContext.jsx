@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useReducer } from 'react'
-import CartContext from './cartContext'
+import CartContext from './cartContextValue'
 
 const CART_STORAGE_KEY = 'daw-mya-yee-cart'
 

@@ -11,12 +11,10 @@ function getStoredOrders() {
   }
 }
 
-function saveOrder(order) {
+export function saveOrder(order) {
   const orders = getStoredOrders()
   window.localStorage.setItem(
     ORDERS_STORAGE_KEY,
     JSON.stringify([...orders, order]),
   )
 }
-
-export default saveOrder

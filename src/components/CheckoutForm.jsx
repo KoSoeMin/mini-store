@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import formatKyat from './formatKyat'
-import saveOrder from './orderStorage'
-import useCart from './useCart'
+import useCart from '../context/useCart'
+import { formatKyat } from '../utils/format'
+import { saveOrder } from '../utils/orderStorage'
 
 function validateMyanmarPhone(phone) {
   const normalizedPhone = phone.replace(/[\s-]/g, '')

@@ -1,11 +1,11 @@
 import { useState } from 'react'
+import useCart from '../context/useCart'
+import { formatKyat } from '../utils/format'
 import CartItem from './CartItem'
 import CheckoutForm from './CheckoutForm'
-import formatKyat from './formatKyat'
-import OrderSuccess from './OrderSuccess'
-import useCart from './useCart'
+import ThankYou from './ThankYou'
 
-function CartSummary() {
+function Cart() {
   const { cartItems, cartTotal, clearCart } = useCart()
   const [checkoutStep, setCheckoutStep] = useState('cart')
   const [completedOrder, setCompletedOrder] = useState(null)
@@ -36,7 +36,7 @@ function CartSummary() {
       </div>
 
       {isComplete ? (
-        <OrderSuccess order={completedOrder} />
+        <ThankYou order={completedOrder} />
       ) : isCheckingOut ? (
         <CheckoutForm
           onCancel={() => setCheckoutStep('cart')}
@@ -77,4 +77,4 @@ function CartSummary() {
   )
 }
 
-export default CartSummary
+export default Cart

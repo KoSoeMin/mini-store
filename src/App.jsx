@@ -1,6 +1,6 @@
 import ProductList from './components/ProductList'
 import CartButton from './components/CartButton'
-import CartSummary from './components/CartSummary'
+import Cart from './components/Cart'
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
 
       <div className="mx-auto grid w-full max-w-6xl gap-6 px-4 py-8 sm:px-6 lg:grid-cols-[1fr_360px] lg:px-8">
         <ProductList />
-        <CartSummary />
+        <Cart />
       </div>
     </main>
   )

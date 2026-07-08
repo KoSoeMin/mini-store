@@ -1,16 +1,9 @@
-import formatKyat from './formatKyat'
+import { formatKyat, formatOrderDate } from '../utils/format'
 
 const DAW_MYA_YEE_VIBER_DISPLAY = '09447048824'
 const DAW_MYA_YEE_VIBER_LINK = 'viber://chat?number=%2B959447048824'
 
-function formatOrderDate(createdAt) {
-  return new Intl.DateTimeFormat('en-GB', {
-    dateStyle: 'medium',
-    timeStyle: 'short',
-  }).format(new Date(createdAt))
-}
-
-function OrderSuccess({ order }) {
+function ThankYou({ order }) {
   return (
     <div className="mt-4 space-y-3">
       <section className="rounded-lg border-2 border-emerald-700 bg-white p-4 text-zinc-950">
@@ -86,4 +79,4 @@ function OrderSuccess({ order }) {
   )
 }
 
-export default OrderSuccess
+export default ThankYou
