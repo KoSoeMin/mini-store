@@ -1,6 +1,10 @@
 const ORDERS_STORAGE_KEY = 'daw-mya-yee-orders'
 
-function getStoredOrders() {
+export function getStoredOrders() {
+  if (typeof window === 'undefined') {
+    return []
+  }
+
   try {
     const storedOrders = window.localStorage.getItem(ORDERS_STORAGE_KEY)
     const parsedOrders = storedOrders ? JSON.parse(storedOrders) : []

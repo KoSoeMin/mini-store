@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import useCart from '../context/useCart'
-import { formatKyat } from '../utils/format'
+import { formatKyat, toArabicNumerals } from '../utils/format'
 import { saveOrder } from '../utils/orderStorage'
 
 function validateMyanmarPhone(phone) {
-  const normalizedPhone = phone.replace(/[\s-]/g, '')
+  const normalizedPhone = toArabicNumerals(phone).replace(/[\s-]/g, '')
 
   return /^09\d{7,9}$/.test(normalizedPhone)
 }
@@ -34,7 +34,7 @@ function CheckoutForm({ onCancel, onOrderComplete }) {
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    const normalizedPhone = customer.phone.replace(/[\s-]/g, '')
+    const normalizedPhone = toArabicNumerals(customer.phone).replace(/[\s-]/g, '')
 
     if (!validateMyanmarPhone(customer.phone)) {
       setPhoneError('ဖုန်းနံပါတ်သည် 09 ဖြင့်စပြီး ဂဏန်း 9 လုံးမှ 11 လုံးအတွင်း ဖြစ်ရမည်။')
