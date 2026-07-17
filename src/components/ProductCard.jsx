@@ -1,16 +1,29 @@
+import { useState } from 'react'
 import useCart from '../context/useCart'
 import { formatKyat } from '../utils/format'
 
 function ProductCard({ product }) {
   const { addToCart } = useCart()
+  const [imageError, setImageError] = useState(false)
 
   return (
     <article className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm">
-      <img
-        src={product.image}
-        alt={product.name}
-        className="aspect-[4/3] w-full bg-zinc-100 object-cover"
-      />
+      {imageError ? (
+        <div
+          className="flex aspect-square w-full items-center justify-center bg-gray-100 text-5xl font-bold text-gray-500"
+          role="img"
+          aria-label={`${product.name} ပုံမရရှိပါ`}
+        >
+          {product.name.charAt(0)}
+        </div>
+      ) : (
+        <img
+          src={product.image}
+          alt={product.name}
+          onError={() => setImageError(true)}
+          className="aspect-square w-full bg-zinc-100 object-cover"
+        />
+      )}
 
       <div className="flex min-h-40 flex-col p-3 sm:p-4">
         <p className="text-xs font-medium text-zinc-500">{product.category}</p>

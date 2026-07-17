@@ -14,6 +14,8 @@ their delivery details, and keep a receipt on the same device.
 - The application is a static React single-page application.
 - It has no backend, authentication, payment gateway, or remote database.
 - The catalogue is maintained in `src/data/products.json`.
+- Product imagery is fully localized in `public/images/`, so the catalogue is
+  available without remote image or cloud-service dependencies.
 - Cart data is retained in browser local storage under `daw-mya-yee-cart`.
 - Completed orders are appended to browser local storage under
   `daw-mya-yee-orders`.
@@ -45,7 +47,13 @@ their delivery details, and keep a receipt on the same device.
   id: Number,
   orderNumber: String,
   customer: { name: String, phone: String, address: String },
-  items: Array<{ id: Number, name: String, price: Number, image: String, quantity: Number }>,
+  items: Array<{
+    id: Number,
+    name: String,
+    price: Number,
+    image: '/images/products/rice.jpg',
+    quantity: Number
+  }>,
   total: Number,
   createdAt: String
 }

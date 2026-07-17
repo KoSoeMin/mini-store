@@ -36,6 +36,20 @@ preserving its current cart and checkout experience.
 2. Add a header control that opens the history panel.
 3. Mount `OrderHistory` only while it is open and pass a close callback.
 
+## Path 5: Localized Image Assets & Fallback Engineering
+
+1. Store every product image as a local relative asset in `public/images/` and
+   reference it from the catalogue with an `/images/...` path. This removes the
+   storefront's dependency on remote image hosts and keeps product browsing
+   offline-ready.
+2. In `ProductCard.jsx`, intercept broken image paths with the image
+   `onError` handler. When loading fails, replace the image with a
+   container-bounded Tailwind CSS fallback that displays a custom colour block
+   and the first Burmese character of the product name.
+3. Future static product photos must use a strict square, 1:1 container format
+   and be at least 400 × 400 pixels. This preserves consistent product-card
+   grid dimensions and prevents image assets from distorting the layout.
+
 ## Verification path
 
 1. Confirm there are no `console.log` calls.
